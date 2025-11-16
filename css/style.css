@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #BBD691, #FEF1E1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#game {
+    display: block;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    font-weight: 900;
+    color: #333;
+    text-shadow: 1px 1px 2px white;
+    z-index: 10;
+}
+
+#introduction {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    min-height: 100px;
+    position: absolute;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: opacity 2s;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#restart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    z-index: 10;
+}
+
+#restart:hover, #restart:active {
+    transform: scale(1.05);
+}
+
+#perfect {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #ff0000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    #score {
+        font-size: 1.5em;
+        top: 15px;
+        right: 15px;
+    }
+    
+    #introduction {
+        font-size: 0.9em;
+        padding: 12px;
+    }
+    
+    #restart {
+        width: 80px;
+        height: 80px;
+        font-size: 0.9em;
+    }
+    
+    #perfect {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #score {
+        font-size: 1.2em;
+        top: 10px;
+        right: 10px;
+    }
+    
+    #introduction {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    
+    #restart {
+        width: 70px;
+        height: 70px;
+        font-size: 0.8em;
+    }
+    
+    #perfect {
+        font-size: 1em;
+    }
+}
